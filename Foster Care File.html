@@ -2,7 +2,7 @@
 <!-- Foster Unfairness -->
 <head>
   <style>
-@import url('https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 </style>
 
 </head>
@@ -10,7 +10,7 @@
 <style>
 .niceFont
 {
-  font-family: "Gill Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .column {
   float: left;
@@ -45,28 +45,79 @@
     font-size: 50px;
    font-family: 'Oswald', sans-serif;
 }
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: black;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('https://noczone-fvdefpncfaxtmfnyjx.netdna-ssl.com/wp-content/uploads/2016/08/sad-family1-640x455.jpg');
+}
+
+.bg2::after {
+  background-image: url('http://www.islandimages.org.uk/wp-content/uploads/2015/08/DSC2330.jpg');
+}
 
 </style>
+
 <body>
-<!-- This would be the navigation bar links-->
-<!-- <ul>
-  <li> <a src=/> Home </a> </li>
-  <li> <a src=/> Suffering Veterans</a> </li>
-  <li> <a src=/> Foster Unfairness<a> </li>
-  <li> <a src=/> Living In Trash</a> </li>
 
-</ul> -->
-<div class="imagecontainer">
-<img style="width:100%;" src="https://images.pexels.com/photos/981781/pexels-photo-981781.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
-<div class="centeredtext"> On any given day, there are nearly 438,000 children in foster care in the United States</div>
-</div>
-
-
-
-
-
-
-
+<main class="wrapper">
+  <section class="section parallax bg1">
+    <h1 style="font-family:'Josefin Sans', sans-serif; color: white;">On any given day, there are nearly 438,000 children in foster care in the United States</hi>
+  </section>
+  <section class="section static">
+    <h1></h1>
+  </section>
+  <section class="section parallax bg2">
+    <h1 style="font-family:'Josefin Sans', sans-serif; color: white;" >The average length of time a child waits to be adopted in foster care is almost three years. Roughly 55 percent of these children have had three or more placements.</hi>
+  </section>
 
 <div>
     <div class="row">
