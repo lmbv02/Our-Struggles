@@ -11,38 +11,16 @@
          <meta charset="utf-8"
          <div class="donate-bar-link float-right">
            <a href="https://web.charityengine.net/Default.aspx?tsid=8593" class="button expanded" target="_blank">Donate</a>
+           <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="Trash.html" class="active1">Living in Trash</a>
+      <a href="Foster Care File.html"class="active2">Foster Unfairness</a>
+      <a href="LoversTavern.html" class="active3">Suffering Veterans</a>
+      <a href="#about"class="active4">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
          </div>
-         <style>
 
-         ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 12px 4px;
-          background-color: #ccfeff;
-         }
-
-         li {
-          text-align: left;
-          display: inline;
-         }
-
-         li a {
-          color: #262424;
-          padding: 13px 100px;
-          text-decoration: none;
-         }
-
-         /* When the link is hovered on, its color will change */
-         li a:hover {
-          background-color: #8e8d8b;
-          color: gray;
-         }
-
-         .active {
-          background-color: #808080;
-          color: gray;
-         }
-         </style>
         <link rel='stylesheet' id='wired-impact-volunteer-management-css'  href='http://dvnf.org/wp-content/plugins/wired-impact-volunteer-management/frontend/css/wi-volunteer-management-public.css?ver=1.3.8' type='text/css' media='all' />
         <link rel='stylesheet' id='wp-foundation-six-style-css'  href='http://dvnf.org/wp-content/themes/wp-foundation-six/assets/css/global-styles.min.css?ver=4.9.5' type='text/css' media='all' />
         <link rel='stylesheet' id='googleFonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C700&#038;ver=4.9.5' type='text/css' media='all' />
@@ -75,6 +53,30 @@
                 </div>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
+                .topnav {
+   background-color: #757575;
+   overflow: hidden;
+ }
+ .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+ }
+ .topnav a:hover {
+     background-color: #d63c1d;
+     color: white;
+ }
+ .active3 {
+     background-color: #4CAF50;
+     color: white;
+ }
+ .topnav .icon {
+     display: none;
+ }
                 * {box-sizing: border-box;}
                 body {font-family: Verdana, sans-serif;}
                 .mySlides {display: none;}
@@ -147,14 +149,6 @@
                 </style>
                 </head>
                 <body>
-                  <ul>
-                   <li><a href="https://www.bitdegree.org/" target="_blank">Home</a></li>
-                   <li><a href="file:///Users/admin/Desktop/Our-Struggles/LoversTavern.html" target="_blank">Veterans Suffereing</a></li>
-                   <li><a href="file:///Users/admin/Desktop/Our-Struggles/Foster%20Care%20File.html" target="_blank">Foster Care</a></li>
-                   <li><a href="file:///Users/admin/Desktop/Our-Struggles/Trash.html" target="_blank">Living in Trash</a></li>
-                  </ul>
-
-
                 <div class="slideshow-container">
 
                 <div class="mySlides fade">
@@ -206,6 +200,19 @@
                     dots[slideIndex-1].className += " active";
                     setTimeout(showSlides, 3000); // Change image every 2 seconds
                 }
+                var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
                 </script>
 
         <article id="post-176" class="post-176 page type-page status-publish hentry sticky-post">
