@@ -4,20 +4,11 @@
   <style>
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 </style>
-
-</head>
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#Living in Trash" class="active1">Living in Trash</a>
-  <a href="Foster.html"class="active2">Foster Unfairness</a>
-  <a href="Veterans.html" class="active3">Suffering Veterans</a>
-  <a href="#about"class="active4">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 </head>
 <style>
+body{ background-color: black;
+color: white;
+}
 .niceFont
 {
   font-family: 'Josefin Sans', sans-serif;
@@ -55,102 +46,104 @@
     font-size: 50px;
    font-family: 'Oswald', sans-serif;
 }
-.wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-}
 
-.section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
-
-  /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
-}
-
-.parallax::after {
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(1.5);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */
-  z-index: -1;
-}
-
-/* The styling for the static div. */
-.static {
-  background: black;
-}
-
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.bg1::after {
-  background-image: url('https://noczone-fvdefpncfaxtmfnyjx.netdna-ssl.com/wp-content/uploads/2016/08/sad-family1-640x455.jpg');
-}
-
-.bg2::after {
-  background-image: url('http://www.islandimages.org.uk/wp-content/uploads/2015/08/DSC2330.jpg');
-}
-.topnav {
-  background-color: #757575;
-  overflow: hidden;
-  font-family: 'Josefin Sans', sans-serif;
-}
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+.parallaxSad{
+    background-image: url("https://i.pinimg.com/originals/b7/73/ab/b773ab40ba46d63f919e3d64ac6d8aea.jpg");
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    padding: 14px 16px;
+    position: relative;
+    text-align: center;
+}
+.parallaxFamily {
+    /* The image used */
+    background-image: url("https://vecer.mk/files/article/2015/08/13/297719-mrachna-tajna-na-edno-selo-bogati-pedofili-so-godini-siluvale-i-ucenuvale-300-deca.jpg");
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
     text-decoration: none;
-    font-size: 17px;
-}
-.topnav a:hover {
-    background-color: #d63c1d;
-    color: white;
-}
-.active1 {
-    background-color: #4CAF50;
-    color: white;
-}
-.topnav .icon {
-    display: none;
-}
-</style>
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: transform .2s;
+    border-radius: 12px;
+    justify-content: center;
 
+
+
+}
+ a:hover{
+   background-color: grey;
+    transform: scale(1.2);
+    color: white;
+
+
+}
+footer{
+  background-color: inherit;
+}
+#fosterCareSideBar a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+#fosterCareSideBar a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+#whatIs{
+  top: 20px;
+    background-color: #bfbfbf;
+}
+#threePerspectives{
+  top: 80px;
+   background-color: #b3b3b3;
+
+}
+#learnMore{
+  top: 140px;
+   background-color: #a6a6a6;
+}
+
+</style>
+<script>
+
+// function buttonChanging(){
+//   document.getElementsByClassName('button').style.background = '#a6a6a6'
+//   document.getElementsByClassName('button').style.color = 'white'
+// }
+</script>
 <body>
 
-<main class="wrapper">
-  <section class="section parallax bg1">
-    <h1 style="font-family:'Josefin Sans', sans-serif; color: white;">On any given day, there are nearly 438,000 children in foster care in the United States</hi>
+<main class=imagecontainer>
+  <section class="parallaxSad">
+    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; font-size: 30px; top:50% 50%; ">On any given day, there are nearly 438,000 children in foster care in the United States</hi>
   </section>
   <section class="section static">
     <h1></h1>
   </section>
-  <section class="section parallax bg2">
-    <h1 style="font-family:'Josefin Sans', sans-serif; color: white; text-align: center;" >The average length of time a child waits to be adopted in foster care is almost three years. Roughly 55 percent of these children have had three or more placements.</hi>
+  <section class="parallaxFamily">
+    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; text-align: center; font-size: 30px;">The average length of time a child waits to be adopted in foster care is almost <b>three years</b>. Roughly 55 percent of these children have had three or more placements.</hi>
   </section>
 
 <div>
@@ -165,18 +158,23 @@
   <img class="column" style="width:100%" src="https://us.123rf.com/450wm/stockbroker/stockbroker1507/stockbroker150701127/42108887-asian-family-with-laptop.jpg?ver=6">
       </div>
 </div>
-
-  <h1 class="niceFont" style="text-align:center"> What is Foster Care?</h1>
-    <p1 class="niceFont"> Many people have heard of Foster Care, however there are various misconceptions of it. By definition it is a a temporary arrangement in which adults provide for the care of a child or children whose birthparent is unable to care for them. Foster parents can last with a child as long as needed, may it be for a week or 5 years. The end goal is for the child to go back to their biological parents. The dilema is, after 5 years is it emotionally healthy for a child to go back to strangers or stay with the family that raised them?   </p1>
+<div>
+  <h1 class="niceFont" style="text-align:center; padding:50px"> What is Foster Care?</h1>
+    <p1 class="niceFont" style="margin: 30px "> Many people have heard of Foster Care, however there are various misconceptions of it. By definition it is a a temporary arrangement in which adults provide for the care of a child or children whose birthparent is unable to care for them. Foster parents can last with a child as long as needed, may it be for a week or 5 years. The end goal is for the child to go back to their biological parents. The dilema is, after 5 years is it emotionally healthy for a child to go back to strangers or stay with the family that raised them?   </p1>
     <h1 class="niceFont" style="text-align:center"> Three Parts of this Story</h1>
-    <p2 class="niceFont"> Usually, news outlits focus on the birthparents abuse or maltreatment, however they never bring light to the fact that the child is returned to a unfit parent and the foster parents distress. Although, every case is different, birthparents are getting away with abusing kids and getting them back. Foster parents basically dedicate their life to raise and provide a loving home for these kids, for them to just be taken away it is dentrimental for all three parties.</p2>
+    <p2 class="niceFont" style="margin: 30px "> Usually, news outlits focus on the birthparents abuse or maltreatment, however they never bring light to the fact that the child is returned to a unfit parent and the foster parents distress. Although, every case is different, birthparents are getting away with abusing kids and getting them back. Foster parents basically dedicate their life to raise and provide a loving home for these kids, for them to just be taken away it is dentrimental for all three parties.</p2>
     <h2 class="niceFont"> The child</h2>
-    <p1 class="niceFont"> Taken from any age a child put in foster care can hop from home to home. In various cases, foster kids are left in the dark about what is going on. Even then they are put under emotional distress, as they get attatched to one certain foster home and then taken away. In the beginning of the process a child could be taken away from an unfit family, and put in the system until the family is qualified once again, or they are adopted by a foster parent. These children are needy and yearn to be cared for and loved, as they are frequently changing houses. It is a lot of pain for a kid to endure especially as such young ages. </p1>
+    <p1 class="niceFont" style="margin: 30px "> Taken from any age a child put in foster care can hop from home to home. In various cases, foster kids are left in the dark about what is going on. Even then they are put under emotional distress, as they get attatched to one certain foster home and then taken away. In the beginning of the process a child could be taken away from an unfit family, and put in the system until the family is qualified once again, or they are adopted by a foster parent. These children are needy and yearn to be cared for and loved, as they are frequently changing houses. It is a lot of pain for a kid to endure especially as such young ages. </p1>
     <h2 class="niceFont"> The Foster Parent</h2>
-    <p1 class="niceFont"> The reason for becoming a foster parent can be multiple. One of the many is because they simply want to care for children, and can't bare their own. In one case, a new born baby was brought to a foster home, as she was taken away from her encarcenated mother. Her birthmother, did not want her child, even when ACS facilitated parent visits, she did not do anything in her power to keep her baby. Two year later, the baby is well acustomed to her foster family, whom she stayed with her entire life. The foster mom that raised her is the only family she has ever known. However, even out of jail and in a stable household, the birthmother does not want her child as she presumably says so in court. Nevertheless, she has the audacity, to want to see her kid and file for custody, at this point that woman is not her mother since she hasn't even seen her. Usually kids put in foster care are arranged for meetings with the birthparents, this particular mom was never interested in seeing her baby. Imagine the emotional sorrow that the foster parents go through, even they arent supposed to get attatched, this mother has raised this baby from birth and yet they expect complete disconnection? That's just unfair, in a blink of an eye, a woman who has done nothing for her new born until she turns three, could easily get custody after her child was taken away. The foster parent does everything in their power to make sure those kids staying with them are well fed, clothed, and clean.
+    <p1 class="niceFont" style="margin: 30px "> The reason for becoming a foster parent can be multiple. One of the many is because they simply want to care for children, and can't bare their own. In one case, a new born baby was brought to a foster home, as she was taken away from her encarcenated mother. Her birthmother, did not want her child, even when ACS facilitated parent visits, she did not do anything in her power to keep her baby. Two year later, the baby is well acustomed to her foster family, whom she stayed with her entire life. The foster mom that raised her is the only family she has ever known. However, even out of jail and in a stable household, the birthmother does not want her child as she presumably says so in court. Nevertheless, she has the audacity, to want to see her kid and file for custody, at this point that woman is not her mother since she hasn't even seen her. Usually kids put in foster care are arranged for meetings with the birthparents, this particular mom was never interested in seeing her baby. Imagine the emotional sorrow that the foster parents go through, even they arent supposed to get attatched, this mother has raised this baby from birth and yet they expect complete disconnection? That's just unfair, in a blink of an eye, a woman who has done nothing for her new born until she turns three, could easily get custody after her child was taken away. The foster parent does everything in their power to make sure those kids staying with them are well fed, clothed, and clean.
     </p1>
+  </div>
     <h2 class="niceFont"> The Birthparents</h2>
 
-    <p1 class="niceFont">  </p1>
+    <p1 class="niceFont"> Being a parent is a lot of responsibility, when money comes short parents still have to provide. Which might justify the fact that they might become drug addicts or alcoholics and that fosters violence, but that doesn't make it right. Even if they fell down the wrong hole, they still love them.</p1>
 
 </body>
+<footer>
+  <div>
+
+</footer>
