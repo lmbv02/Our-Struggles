@@ -12,6 +12,7 @@ color: white;
 .niceFont
 {
   font-family: 'Josefin Sans', sans-serif;
+  color: black;
 }
 .column {
   float: left;
@@ -44,7 +45,7 @@ color: white;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
-   font-family: 'Oswald', sans-serif;
+
 }
 
 .parallaxSad{
@@ -70,83 +71,76 @@ color: white;
     position: relative;
     text-align: center;
 }
-.button {
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 20px;
+.parallaxKid {
+    /* The image used */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdfRUOOE92YpX3HJCDww3-R_LImEvWdVqXXUBtjbYPg3XTyXWE");
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: transform .2s;
-    border-radius: 12px;
-    justify-content: center;
-
-
-
+    position: relative;
+    text-align: center;
 }
- a:hover{
-   background-color: grey;
-    transform: scale(1.2);
+.block {
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    width: 100%;
+    border: none;
+    background-image: url("https://images.pexels.com/photos/754082/pexels-photo-754082.jpeg?auto=compress&cs=tinysrgb&h=350");
     color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none
 
 
 }
-footer{
-  background-color: inherit;
-}
-#fosterCareSideBar a {
-    position: absolute; /* Position them relative to the browser window */
-    left: -80px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
-    padding: 15px; /* 15px padding */
-    width: 100px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
-}
-#fosterCareSideBar a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
-}
-#whatIs{
-  top: 20px;
-    background-color: #bfbfbf;
-}
-#threePerspectives{
-  top: 80px;
-   background-color: #b3b3b3;
+header{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url("https://images.pexels.com/photos/754082/pexels-photo-754082.jpeg?auto=compress&cs=tinysrgb&h=350");
+    text-align: center;
+    padding-top: 10px 0px 10px;
 
 }
-#learnMore{
-  top: 140px;
-   background-color: #a6a6a6;
-}
 
+
+ a:hover{
+   background-color: black;
+    transform: scale(2);
+
+}
 </style>
-<script>
 
-// function buttonChanging(){
-//   document.getElementsByClassName('button').style.background = '#a6a6a6'
-//   document.getElementsByClassName('button').style.color = 'white'
-// }
-</script>
 <body>
+<header>
+  <h1 class=boldText style="padding: 0px 0px 10px 0px; border: 10px" > The Foster Care Reality</h1>
+</header>
+<div>
+  <iframe width="560"height="315" src="https://www.youtube.com/embed/lOeQUwdAjE0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<div style="margin-bottom: 25px; margin-top: 25px;">
+<a class="block" href="https://www.togetherwerise.org/donate" id="donate">Donate</a>
+</div>
 
 <main class=imagecontainer>
   <section class="parallaxSad">
-    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; font-size: 30px; top:50% 50%; ">On any given day, there are nearly 438,000 children in foster care in the United States</hi>
+    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; font-size: 30px; top:50% 50%; postion: relative;">On any given day, there are nearly 438,000 children in foster care in the United States</hi>
   </section>
   <section class="section static">
     <h1></h1>
   </section>
   <section class="parallaxFamily">
-    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; text-align: center; font-size: 30px;">The average length of time a child waits to be adopted in foster care is almost <b>three years</b>. Roughly 55 percent of these children have had three or more placements.</hi>
+    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; text-align: center; font-size: 30px; position: relative;">The average length of time a child waits to be adopted in foster care is almost <b>three years</b>. Roughly 55 percent of these children have had three or more placements.</hi>
   </section>
+  <h1></h1>
+  <section class="parallaxKid">
+    <h1 class=centeredtext style="font-family:'Josefin Sans', sans-serif; color: white; text-align: center; font-size: 30px; position: relative;">34% of people who sexually abuse a child are family members.</h1>
+    </section>
 
-<div>
+<div style="background-color:white;">
     <div class="row">
       <div>
   <img class="column" style="width:100%" src="https://us.123rf.com/450wm/digitalskill/digitalskill1701/digitalskill170100015/69119929-african-american-grandparents-and-their-grandson-.jpg?ver=6">
@@ -158,11 +152,15 @@ footer{
   <img class="column" style="width:100%" src="https://us.123rf.com/450wm/stockbroker/stockbroker1507/stockbroker150701127/42108887-asian-family-with-laptop.jpg?ver=6">
       </div>
 </div>
-<div>
+<div style="background-color: white;">
+  <div id=whatIsFosterCare>
   <h1 class="niceFont" style="text-align:center; padding:50px"> What is Foster Care?</h1>
     <p1 class="niceFont" style="margin: 30px "> Many people have heard of Foster Care, however there are various misconceptions of it. By definition it is a a temporary arrangement in which adults provide for the care of a child or children whose birthparent is unable to care for them. Foster parents can last with a child as long as needed, may it be for a week or 5 years. The end goal is for the child to go back to their biological parents. The dilema is, after 5 years is it emotionally healthy for a child to go back to strangers or stay with the family that raised them?   </p1>
+  </div>
+  <div id=threePerspectivesDiv >
     <h1 class="niceFont" style="text-align:center"> Three Parts of this Story</h1>
     <p2 class="niceFont" style="margin: 30px "> Usually, news outlits focus on the birthparents abuse or maltreatment, however they never bring light to the fact that the child is returned to a unfit parent and the foster parents distress. Although, every case is different, birthparents are getting away with abusing kids and getting them back. Foster parents basically dedicate their life to raise and provide a loving home for these kids, for them to just be taken away it is dentrimental for all three parties.</p2>
+  </div>
     <h2 class="niceFont"> The child</h2>
     <p1 class="niceFont" style="margin: 30px "> Taken from any age a child put in foster care can hop from home to home. In various cases, foster kids are left in the dark about what is going on. Even then they are put under emotional distress, as they get attatched to one certain foster home and then taken away. In the beginning of the process a child could be taken away from an unfit family, and put in the system until the family is qualified once again, or they are adopted by a foster parent. These children are needy and yearn to be cared for and loved, as they are frequently changing houses. It is a lot of pain for a kid to endure especially as such young ages. </p1>
     <h2 class="niceFont"> The Foster Parent</h2>
@@ -172,9 +170,14 @@ footer{
     <h2 class="niceFont"> The Birthparents</h2>
 
     <p1 class="niceFont" style="margin: 30px;"> Being a parent is a lot of responsibility, when money comes short parents still have to provide. Which might justify the fact that they might become drug addicts or alcoholics and that fosters violence, but that doesn't make it right. Even if they fell down the wrong hole, they still love them.</p1>
+    <div style="margin-bottom: 25px; margin-top: 25px;">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LyItYWT3lr8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <a class="block" href="https://www.togetherwerise.org/donate" id="donate">Donate</a>
+    </div>
 
 </body>
 <footer>
-  <div>
+
 
 </footer>
